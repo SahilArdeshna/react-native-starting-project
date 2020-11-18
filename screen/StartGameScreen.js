@@ -4,6 +4,9 @@ import { View, StyleSheet, Text, Button, TouchableWithoutFeedback, Keyboard, Ale
 import Card from '../components/Card';
 import Color from '../contents/color';
 import Input from '../components/Input';
+import BodyText from '../components/BodyText';
+import TitleText from '../components/TitleText';
+import DefaultStyle from '../contents/default-styles';
 import NumberContainer from '../components/NumberContainer';
 
 const StartGameScreen = (props) => {
@@ -83,9 +86,9 @@ const StartGameScreen = (props) => {
             } }
         >
             <View style={ styles.screen }>
-                <Text style={ styles.title }>Start a New Game!</Text>
+                <Text style={ DefaultStyle.titleText }>Start a New Game!</Text>
                 <Card style={ styles.inputContainer }>
-                    <Text>Select a Number</Text>
+                    <BodyText>Select a Number</BodyText>
                     <Input                     
                         style={ styles.input } 
                         blurOnSubmit
@@ -127,8 +130,9 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
-        marginVertical: 10
-    },
+        marginVertical: 10,
+        fontFamily: "open-sans-bold"
+    }, 
     inputContainer: {
         width: 300,
         maxWidth: '80%',
