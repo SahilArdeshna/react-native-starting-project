@@ -62,6 +62,7 @@ export default function App() {
   } else if (guessRounds > 0) {
     content = (
       <GameOverScreen 
+        userNumber={ userNumber }
         numOfRounds={ guessRounds }
         onRestart={ newGameHandler }
       />
